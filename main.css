@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "VigaRegular";
+  src: url('fonts/Viga-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url('images/noise-big.png');
+  font-family: "VigaRegular", sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  letter-spacing: 1px;
+}
+
+audio {
+  width: 400px;
+}
+
+.header-style {
+  background-image: linear-gradient(90deg,rgb(160, 160, 160), rgb(160, 160, 160));
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 35px;
+  margin-left: -8px;
+  margin-top: -30px;
+}
+
+.year-index {
+  color: rgba(255,255,255,0.7);
+  width: 75%;
+  max-width: 800px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+}
+
+.container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouthful {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/babasweeny.png');
+  background-size: cover;
+  background-position-y: 50%;
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+  transition: background 0.5s ease;
+}
+
+.mouthful:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),;
+}
+
+.bitcrunch {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/The_Bends_orb_test_red.png');
+  background-size: cover;
+  background-position-y: 50%;
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.bitcrunch:hover {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+}
+
+.everything-happens {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/everything\ happens.jpg');
+  background-size: cover;
+  background-position-y: 50%;
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.blur {
+  backdrop-filter: blur(20px);
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  border: 0px;
+  border-radius: 15px;
+}
+
+.light-blur {
+  background:
+    linear-gradient(90deg,rgba(103, 237, 255, 0.2), rgba(200, 62, 255, 0.2));
+  backdrop-filter: blur(20px);
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255,255,255,0.7);
+  border: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.paragraph {
+  margin: 20px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.ac-container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.album-paragraph {
+  margin: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-song {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+  padding-bottom: 10px;
+  margin-bottom: 35px;
+}
+
+.album-song-end {
+  padding-bottom: 10px;
+  margin-bottom: 35px;
+}
+
+.album-cover {
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.cover {
+  width: 300px;
+  height: 300px;
+}
+
+.paragraph-text {
+  margin-top: -15px;
+  color: rgba(255, 255, 255, 0.719);
+}
+
+.header-text {
+  color: black;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  margin-top: 15px;
+  margin-right: 10px;
+  width: 25px;
+}
+
+.newgrounds {
+  margin-top: 18px;
+}
+
+#audio-gradient-overlay {
+  --period: 3600px;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease;
+  mix-blend-mode: normal;
+
+  background: repeating-linear-gradient(
+    to left,
+    hsla(  0, 100%, 60%, 0.15)    0px,
+    hsla( 10, 100%, 60%, 0.15)  100px,
+    hsla( 20, 100%, 60%, 0.15)  200px,
+    hsla( 30, 100%, 60%, 0.15)  300px,
+    hsla( 40, 100%, 60%, 0.15)  400px,
+    hsla( 50, 100%, 60%, 0.15)  500px,
+    hsla( 60, 100%, 60%, 0.15)  600px,
+    hsla( 70, 100%, 60%, 0.15)  700px,
+    hsla( 80, 100%, 60%, 0.15)  800px,
+    hsla( 90, 100%, 60%, 0.15)  900px,
+    hsla(100, 100%, 60%, 0.15) 1000px,
+    hsla(110, 100%, 60%, 0.15) 1100px,
+    hsla(120, 100%, 60%, 0.15) 1200px,
+    hsla(130, 100%, 60%, 0.15) 1300px,
+    hsla(140, 100%, 60%, 0.15) 1400px,
+    hsla(150, 100%, 60%, 0.15) 1500px,
+    hsla(160, 100%, 60%, 0.15) 1600px,
+    hsla(170, 100%, 60%, 0.15) 1700px,
+    hsla(180, 100%, 60%, 0.15) 1800px,
+    hsla(190, 100%, 60%, 0.15) 1900px,
+    hsla(200, 100%, 60%, 0.15) 2000px,
+    hsla(210, 100%, 60%, 0.15) 2100px,
+    hsla(220, 100%, 65%, 0.15) 2200px,
+    hsla(230, 100%, 65%, 0.15) 2300px,
+    hsla(240, 100%, 65%, 0.15) 2400px,
+    hsla(250, 100%, 65%, 0.15) 2500px,
+    hsla(260, 100%, 65%, 0.15) 2600px,
+    hsla(270, 100%, 65%, 0.15) 2700px,
+    hsla(280, 100%, 65%, 0.15) 2800px,
+    hsla(290, 100%, 65%, 0.15) 2900px,
+    hsla(300, 100%, 65%, 0.15) 3000px,
+    hsla(310, 100%, 65%, 0.15) 3100px,
+    hsla(320, 100%, 65%, 0.15) 3200px,
+    hsla(330, 100%, 65%, 0.15) 3300px,
+    hsla(340, 100%, 60%, 0.15) 3400px,
+    hsla(350, 100%, 60%, 0.15) 3500px,
+    hsla(  0, 100%, 60%, 0.15) 3600px
+  );
+
+  background-size: var(--period) 100%;
+  background-position: 0 50%;
+  animation: rainbow-slide 12s linear infinite paused;
+}
+
+#audio-gradient-overlay.on {
+  opacity: .5;
+  animation-play-state: running;
+}
+
+@keyframes rainbow-slide {
+  from { background-position: 0 50%; }
+  to   { background-position: calc(1 * var(--period)) 50%; }
+}
+
+.blur,
+.album-song,
+.album-song-end {
+  position: relative;
+}
+
+.album-song .eq-stack,
+.album-song-end .eq-stack {
+  right: -190px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+}
+
+.eq-stack {
+  position: absolute;
+  right: -160px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 160px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.eq-stack.on { opacity: 1; }
+
+.eq-bar {
+  height: 8px;
+  width: 0;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 0 8px rgba(255,255,255,.15);
+}

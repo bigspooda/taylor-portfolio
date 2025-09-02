@@ -11,6 +11,7 @@ body {
   font-weight: 400;
   font-style: bold;
   letter-spacing: 1px;
+  padding-bottom: 25px;
 }
 
 audio {
@@ -18,7 +19,8 @@ audio {
 }
 
 .header-style {
-  background-image: linear-gradient(90deg,rgb(160, 160, 160), rgb(160, 160, 160));
+  background-image: url('images/banner-9177.png');
+  background-size: cover;
   position: fixed;
   z-index: 1;
   display: flex;
@@ -73,6 +75,28 @@ audio {
   border-radius: 15px;
 }
 
+.system-instruction {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/The_Bends_orb_test.png');
+  background-size: cover;
+  background-position-y: 50%;
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.megagecko {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/The_Bends_orb_test.png');
+  background-size: cover;
+  background-position-y: 50%;
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
 .bitcrunch:hover {
   background:
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -82,6 +106,28 @@ audio {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('images/everything\ happens.jpg');
+  background-size: cover;
+  background-position-y: 50%;
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.mhm {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/mhm.jpg');
+  background-size: cover;
+  background-position-y: 50%;
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.defenders-of-the-funny {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/dof.jpg');
   background-size: cover;
   background-position-y: 50%;
   width: 75%;
@@ -99,9 +145,24 @@ audio {
   border-radius: 15px;
 }
 
-.light-blur {
+.light-blur-eh {
   background:
     linear-gradient(90deg,rgba(103, 237, 255, 0.2), rgba(200, 62, 255, 0.2));
+  backdrop-filter: blur(20px);
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255,255,255,0.7);
+  border: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.light-blur-mhm {
+  background:
+    linear-gradient(90deg,rgba(255, 176, 103, 0.2), rgba(255, 62, 62, 0.2));
   backdrop-filter: blur(20px);
   padding-left: 30px;
   padding-right: 30px;

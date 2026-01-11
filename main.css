@@ -9,8 +9,10 @@ body {
   background-image: url('images/noise-big.png');
   font-family: "VigaRegular", sans-serif;
   font-weight: 400;
-  font-style: bold;
   letter-spacing: 1px;
+  padding-bottom: 25px;
+  margin: 0;
+  padding-top: 35px;
   padding-bottom: 25px;
 }
 
@@ -29,8 +31,8 @@ audio {
   align-items: center;
   width: 100vw;
   height: 35px;
-  margin-left: -8px;
-  margin-top: -30px;
+  margin-top: -35px;
+  z-index: 10;
 }
 
 .year-index {
@@ -48,92 +50,471 @@ audio {
   align-items: center;
 }
 
-.mouthful {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('images/babasweeny.png');
-  background-size: cover;
-  background-position-y: 50%;
+/* 2025 SONGS */
+
+/* CANDY SWIPE */
+
+.candy-swipe {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
   width: 75%;
   max-width: 800px;
   border-radius: 15px;
-  transition: background 0.5s ease;
 }
 
-.mouthful:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),;
+.candy-swipe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('images/candyswipe.png');
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  z-index: 0;
 }
+
+.candy-swipe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  opacity: 0.6;
+
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.candy-swipe:hover::before {
+  transform: scale(1.1);  /* Amount to scale in/out the card */
+}
+
+.candy-swipe:hover::after {
+  opacity: 0.8; /* Amount of darkness during hover the card */
+}
+
+.candy-swipe .blur {
+  position: relative;
+  z-index: 2;
+}
+
+/* BIT.CRUNCH. */
 
 .bitcrunch {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('images/The_Bends_orb_test_red.png');
-  background-size: cover;
-  background-position-y: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
   width: 75%;
   max-width: 800px;
   border-radius: 15px;
 }
+
+.bitcrunch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('images/The_Bends_orb_test_red.png');
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  z-index: 0;
+}
+
+.bitcrunch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  opacity: 0.6;
+
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.bitcrunch:hover::before {
+  transform: scale(1.1);  /* Amount to scale in/out the card */
+}
+
+.bitcrunch:hover::after {
+  opacity: 0.8; /* Amount of darkness during hover the card */
+}
+
+.bitcrunch .blur {
+  position: relative;
+  z-index: 2;
+}
+
+/* system.Instruction */
 
 .system-instruction {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('images/The_Bends_orb_test.png');
-  background-size: cover;
-  background-position-y: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
   width: 75%;
   max-width: 800px;
   border-radius: 15px;
 }
+
+.system-instruction::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('images/The_Bends_orb_test.png');
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  z-index: 0;
+}
+
+.system-instruction::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  opacity: 0.6;
+
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.system-instruction:hover::before {
+  transform: scale(1.1);  /* Amount to scale in/out the card */
+}
+
+.system-instruction::after {
+  opacity: 0.8; /* Amount of darkness during hover the card */
+}
+
+.system-instruction .blur {
+  position: relative;
+  z-index: 2;
+}
+
+/* megagecko! */
 
 .megagecko {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('images/The_Bends_orb_test.png');
-  background-size: cover;
-  background-position-y: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
   width: 75%;
   max-width: 800px;
   border-radius: 15px;
 }
 
-.bitcrunch:hover {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+.megagecko::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('images/The_Bends_orb_test.png');
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  z-index: 0;
 }
+
+.megagecko::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  opacity: 0.6;
+
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.megagecko:hover::before {
+  transform: scale(1.1);  /* Amount to scale in/out the card */
+}
+
+.megagecko::after {
+  opacity: 0.8; /* Amount of darkness during hover the card */
+}
+
+.megagecko .blur {
+  position: relative;
+  z-index: 2;
+}
+
+/* 2024 SONGS */
+
+/* Mouthful! */
+
+.mouthful {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.mouthful::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('images/babasweeny.png');
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  z-index: 0;
+}
+
+.mouthful::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  opacity: 0.6;
+
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.mouthful:hover::before {
+  transform: scale(1.1);  /* amount to scale in/out the card */
+}
+
+.mouthful:hover::after {
+  opacity: 0.8; /* amount of darkness during hover the card */
+}
+
+.mouthful .blur {
+  position: relative;
+  z-index: 2;
+}
+
+/* (ALBUM) Everything Happens */
 
 .everything-happens {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('images/everything\ happens.jpg');
-  background-size: cover;
-  background-position-y: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
   width: 75%;
   max-width: 800px;
   border-radius: 15px;
 }
+
+.everything-happens::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("images/everything happens.jpg");
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+
+  z-index: 0;
+}
+
+.everything-happens::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.6;
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.everything-happens .light-blur-eh,
+.everything-happens .blur {
+  position: relative;
+  z-index: 2;
+}
+
+.everything-happens:hover::before {
+  transform: scale(1.08);
+}
+
+.everything-happens .blur::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.everything-happens .blur > * {
+  position: relative;
+  z-index: 1;
+}
+
+.everything-happens:hover .blur::after {
+  opacity: 0.2;
+}
+
+/* 2020 SONGS */
+
+/* (ALBUM) mhm */
 
 .mhm {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('images/mhm.jpg');
-  background-size: cover;
-  background-position-y: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
   width: 75%;
   max-width: 800px;
   border-radius: 15px;
 }
 
-.defenders-of-the-funny {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('images/dof.jpg');
+.mhm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("images/mhm.jpg");
   background-size: cover;
-  background-position-y: 50%;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+
+  z-index: 0;
+}
+
+.mhm::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.6;
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.mhm .light-blur-mhm,
+.mhm .blur {
+  position: relative;
+  z-index: 2;
+}
+
+.mhm:hover::before {
+  transform: scale(1.08);
+}
+
+.mhm .blur::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.mhm .blur > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mhm:hover .blur::after {
+  opacity: 0.2;
+}
+
+/* Defenders of the Funny */
+
+.defenders-of-the-funny {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
   width: 75%;
   max-width: 800px;
   border-radius: 15px;
 }
+
+.defenders-of-the-funny::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('images/dof.jpg');
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+  z-index: 0;
+}
+
+.defenders-of-the-funny::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  opacity: 0.6;
+
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.defenders-of-the-funny:hover::before {
+  transform: scale(1.1);  /* amount to scale in/out the card */
+}
+
+.defenders-of-the-funny:hover::after {
+  opacity: 0.8; /* amount of darkness during hover the card */
+}
+
+.defenders-of-the-funny .blur {
+  position: relative;
+  z-index: 2;
+}
+
+/* SONGS END */
 
 .blur {
   backdrop-filter: blur(20px);
@@ -333,6 +714,7 @@ audio {
   pointer-events: none;
   opacity: 0;
   transition: opacity .3s ease;
+  z-index: 3;
 }
 .eq-stack.on { opacity: 1; }
 

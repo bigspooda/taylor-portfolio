@@ -166,3 +166,30 @@ body.page-enter .info-title::after {
     drop-shadow(0 0 10px rgba(140, 220, 255, 0.22))
     drop-shadow(0 0 12px rgba(255, 140, 220, 0.14));
 }
+
+@media (max-width: 700px) {
+  .info-wrap {
+    padding: 20px 0 10px;
+  }
+
+  .info-card {
+    width: calc(100% - 24px);
+    max-width: none;
+    padding: 18px;
+  }
+
+  .info-link {
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .email-callout {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: center;
+  }
+}

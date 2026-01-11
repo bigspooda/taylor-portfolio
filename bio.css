@@ -208,3 +208,50 @@ body.page-enter .bio-meta {
 .album-mention:hover::after {
   transform: scaleX(1);
 }
+
+@media (max-width: 700px) {
+  .bio-wrap {
+    padding: 20px 0 10px;
+  }
+
+  .bio-card {
+    width: calc(100% - 24px);
+    max-width: none;
+
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .bio-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-photo {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .bio-meta {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .bio-meta-line {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .bio-right {
+    text-align: center;
+  }
+
+  .bio-title {
+    font-size: 24px;
+  }
+}

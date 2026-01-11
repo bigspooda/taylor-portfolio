@@ -12,8 +12,9 @@ body {
   letter-spacing: 1px;
   padding-bottom: 25px;
   margin: 0;
-  padding-top: 35px;
+  padding-top: 70px;
   padding-bottom: 25px;
+  overflow-x: hidden;
 }
 
 audio {
@@ -31,8 +32,49 @@ audio {
   align-items: center;
   width: 100vw;
   height: 35px;
-  margin-top: -35px;
   z-index: 10;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.nav-style {
+  background-image: url('images/banner2.png');
+  background-size: cover;
+
+  position: fixed;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+
+  width: 100vw;
+  height: 35px;
+
+  z-index: 9;
+  top: 35px;
+  left: 0;
+
+  transform: translateY(0);
+  transition: transform 0.35s ease;
+}
+
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+body.nav-retreat .nav-style {
+  transform: translateY(-35px);
 }
 
 .year-index {
@@ -48,6 +90,35 @@ audio {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.year-nav {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.year-nav a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 140ms ease;
+}
+
+.year-nav a:hover {
+  color: rgba(255,255,255,0.95);
+}
+
+.year-dot {
+  color: rgba(255,255,255,0.35);
+  pointer-events: none;
 }
 
 /* 2025 SONGS */
@@ -102,6 +173,60 @@ audio {
 .candy-swipe .blur {
   position: relative;
   z-index: 2;
+}
+
+.candy-swipe .links.links-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.candy-swipe .links.links-stack .links-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.candy-swipe .links.links-stack .award-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.candy-swipe .award-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.candy-swipe .award-tooltip {
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 70%;
+  transform: translateY(-50%) translateX(-4px);
+
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(0, 0, 0, 0.85);
+
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 50;
+}
+
+.candy-swipe .award-badge:hover .award-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 /* BIT.CRUNCH. */
@@ -199,7 +324,7 @@ audio {
   transform: scale(1.1);  /* Amount to scale in/out the card */
 }
 
-.system-instruction::after {
+.system-instruction:hover::after {
   opacity: 0.8; /* Amount of darkness during hover the card */
 }
 
@@ -251,7 +376,7 @@ audio {
   transform: scale(1.1);  /* Amount to scale in/out the card */
 }
 
-.megagecko::after {
+.megagecko:hover::after {
   opacity: 0.8; /* Amount of darkness during hover the card */
 }
 
@@ -462,9 +587,11 @@ audio {
   opacity: 0.2;
 }
 
-/* Defenders of the Funny */
+/* 2019 SONGS */
 
-.defenders-of-the-funny {
+/* huh */
+
+.huh {
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -474,44 +601,138 @@ audio {
   border-radius: 15px;
 }
 
-.defenders-of-the-funny::before {
+.huh::before {
   content: "";
   position: absolute;
   inset: 0;
 
-  background-image: url('images/dof.jpg');
+  background-image: url("images/huh.jpg");
   background-size: cover;
   background-position: center 50%;
 
   transform: scale(1);
   transition: transform 0.5s ease;
   will-change: transform;
+
   z-index: 0;
 }
 
-.defenders-of-the-funny::after {
+.huh::after {
   content: "";
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  background: rgba(0, 0, 0, 1);
   opacity: 0.6;
+  pointer-events: none;
 
-  transition: opacity 0.5s ease;
   z-index: 1;
 }
 
-.defenders-of-the-funny:hover::before {
-  transform: scale(1.1);  /* amount to scale in/out the card */
-}
-
-.defenders-of-the-funny:hover::after {
-  opacity: 0.8; /* amount of darkness during hover the card */
-}
-
-.defenders-of-the-funny .blur {
+.huh .light-blur-huh,
+.huh .blur {
   position: relative;
   z-index: 2;
+}
+
+.huh:hover::before {
+  transform: scale(1.08);
+}
+
+.huh .blur::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.huh .blur > * {
+  position: relative;
+  z-index: 1;
+}
+
+.huh:hover .blur::after {
+  opacity: 0.2;
+}
+
+/* Time Surfin' */
+
+.times {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  width: 75%;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.times::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("images/timesurf.jpg");
+  background-size: cover;
+  background-position: center 50%;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  will-change: transform;
+
+  z-index: 0;
+}
+
+.times::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.6;
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.times .light-blur-times,
+.times .blur {
+  position: relative;
+  z-index: 2;
+}
+
+.times:hover::before {
+  transform: scale(1.08);
+}
+
+.times.blur::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.times .blur > * {
+  position: relative;
+  z-index: 1;
+}
+
+.times:hover .blur::after {
+  opacity: 0.2;
 }
 
 /* SONGS END */
@@ -555,6 +776,37 @@ audio {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
+.light-blur-huh {
+  background:
+    linear-gradient(90deg,rgba(255, 103, 103, 0.2), rgba(255, 133, 62, 0.2));
+  backdrop-filter: blur(20px);
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255,255,255,0.7);
+  border: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.light-blur-times {
+  background:
+    linear-gradient(90deg,rgba(103, 187, 255, 0.2), rgba(232, 62, 255, 0.2));
+  backdrop-filter: blur(20px);
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255,255,255,0.7);
+  border: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
 
 .paragraph {
   margin: 20px;
@@ -725,4 +977,59 @@ audio {
   border-bottom-right-radius: 999px;
   background: rgba(255,255,255,0.4);
   box-shadow: 0 0 8px rgba(255,255,255,.15);
+}
+
+.site-footer {
+  width: 100%;
+  margin-top: 60px;
+  padding: 30px 0 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  opacity: 0.85;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 500px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.473);
+}
+
+.socials {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.socials a:hover .social-icon {
+  opacity: 1;
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
+}
+
+.year-index,
+.everything-happens,
+.mhm,
+.mouthful,
+.album-song,
+.album-song-end {
+  scroll-margin-top: 70px;
 }

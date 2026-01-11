@@ -82,7 +82,7 @@
 
   function findCard(audio) {
     return audio.closest(
-      '.candy-swipe, .mouthful, .bitcrunch, .system-instruction, .megagecko, .everything-happens, .mhm, .defenders-of-the-funny'
+      '.candy-swipe, .mouthful, .bitcrunch, .system-instruction, .megagecko, .everything-happens, .mhm, .huh, .defenders-of-the-funny, .times'
     );
   }
 
@@ -111,7 +111,7 @@
 
     const eqWidth = eq.getBoundingClientRect().width || 160;
     if (left + eqWidth > window.scrollX + window.innerWidth - 8) {
-      left = Math.max(window.scrollX + 8, cardLeft - gap - eqWidth);
+      left = Math.max(window.scrollX + 8, cardLeft - eqWidth);
       eq.style.left = `${left}px`;
     }
   }
@@ -194,7 +194,7 @@
 // CLICKABLE CARDS SCRIPT
 (function () {
   const cards = document.querySelectorAll(
-    '.candy-swipe, .mouthful, .bitcrunch, .system-instruction, .megagecko, .defenders-of-the-funny, .everything-happens, .mhm'
+    '.candy-swipe, .mouthful, .bitcrunch, .system-instruction, .megagecko, .defenders-of-the-funny, .huh, .everything-happens, .mhm, .times'
   );
 
   if (!cards.length) return;
@@ -224,4 +224,34 @@
       }
     });
   });
+})();
+
+(function () {
+  let lastY = window.scrollY;
+  let ticking = false;
+
+  function apply() {
+    const y = window.scrollY;
+    const goingDown = y > lastY;
+
+    if (y > 40 && goingDown) {
+      document.body.classList.add('nav-retreat');
+    } else if (!goingDown || y <= 40) {
+      document.body.classList.remove('nav-retreat');
+    }
+
+    lastY = y;
+    ticking = false;
+  }
+
+  document.body.classList.remove('nav-retreat');
+  lastY = window.scrollY;
+  apply();
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(apply);
+    }
+  }, { passive: true });
 })();

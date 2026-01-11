@@ -1033,3 +1033,48 @@ body.nav-retreat .nav-style {
 .album-song-end {
   scroll-margin-top: 70px;
 }
+
+/* Mobile Fix */
+
+@media (max-width: 700px) {
+  .candy-swipe, .mouthful, .bitcrunch, .system-instruction, .megagecko,
+  .everything-happens, .mhm, .defenders-of-the-funny, .huh, .times {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  .blur {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .paragraph {
+    margin: 16px 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cover {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .album-paragraph {
+    margin: 16px 0 0;
+  }
+}

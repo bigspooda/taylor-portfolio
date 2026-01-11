@@ -90,7 +90,7 @@
     return audio.closest('.album-song, .album-song-end') || audio;
   }
 
-  function positionEQ() {
+    function positionEQ() {
     if (!cardEl || !targetEl) return;
 
     const cardRect = cardEl.getBoundingClientRect();
@@ -101,20 +101,26 @@
 
     const targetMidY = window.scrollY + targetRect.top + targetRect.height / 2;
 
+    const eqWidth = eq.getBoundingClientRect().width || 160;
+
+    
     let left = cardRight;
 
-    const top = targetMidY;
+    
+    if (left + eqWidth > window.scrollX + window.innerWidth) {
+        left = cardLeft - eqWidth;
+    }
 
-    eq.style.top = `${top}px`;
+    
+    const minLeft = window.scrollX;
+    const maxLeft = window.scrollX + window.innerWidth - eqWidth;
+    left = Math.max(minLeft, Math.min(maxLeft, left));
+
+    eq.style.top = `${targetMidY}px`;
     eq.style.left = `${left}px`;
     eq.style.transform = 'translateY(-50%)';
-
-    const eqWidth = eq.getBoundingClientRect().width || 160;
-    if (left + eqWidth > window.scrollX + window.innerWidth - 8) {
-      left = Math.max(window.scrollX + 8, cardLeft - eqWidth);
-      eq.style.left = `${left}px`;
     }
-  }
+
 
   function startEQ(audio) {
     if (activeAudio) stopEQ(activeAudio, true);

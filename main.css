@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-image: url('images/noise-big.png');
   font-family: "VigaRegular", sans-serif;
@@ -15,6 +19,8 @@ body {
   padding-top: 70px;
   padding-bottom: 25px;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 audio {

@@ -30,6 +30,9 @@
 
 // EQUALIZER SCRIPT
 (function () {
+  if (window.matchMedia('(max-width: 700px)').matches) {
+  return;
+  }
   const players = Array.from(document.querySelectorAll('audio'));
 
   const eq = document.createElement('div');

@@ -30,7 +30,7 @@ audio {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 35px;
   z-index: 10;
   top: 0;
@@ -50,7 +50,7 @@ audio {
   align-items: center;
   gap: 22px;
 
-  width: 100vw;
+  width: 100%;
   height: 35px;
 
   z-index: 9;
@@ -1037,8 +1037,12 @@ body.nav-retreat .nav-style {
 /* Mobile Fix */
 
 @media (max-width: 700px) {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   .candy-swipe, .mouthful, .bitcrunch, .system-instruction, .megagecko,
-  .everything-happens, .mhm, .defenders-of-the-funny, .huh, .times {
+  .defenders-of-the-funny, .everything-happens, .mhm, .huh, .times {
     width: calc(100% - 24px);
     max-width: none;
   }
@@ -1051,15 +1055,14 @@ body.nav-retreat .nav-style {
   }
 
   .paragraph {
-    margin: 16px 0;
+    margin: 14px 0;
     width: 100%;
     align-items: center;
     text-align: center;
   }
 
   .cover {
-    width: 100%;
-    max-width: 320px;
+    width: min(320px, 100%);
     height: auto;
     aspect-ratio: 1 / 1;
   }
@@ -1075,6 +1078,6 @@ body.nav-retreat .nav-style {
   }
 
   .album-paragraph {
-    margin: 16px 0 0;
+    margin: 14px 0 0;
   }
 }
